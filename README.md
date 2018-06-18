@@ -5,7 +5,7 @@ This terraform module provisions a Google Cloud Storage bucket. The real bucket 
 ## Usage
 
 ```hcl
-module "gcp-project" {
+module "gcs_bucket" {
   source  = "nephosolutions/gcs-bucket/google"
   version = "0.1.0"
 
