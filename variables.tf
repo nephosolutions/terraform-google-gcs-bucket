@@ -41,6 +41,13 @@ variable "role_entities" {
   type    = "list"
 }
 
+variable "default_acl" {
+  description = "Set the established ACL as default for all objects in the bucket."
+  default = false
+  type = "string"
+}
+
+
 variable "storage_class" {
   description = "The Storage Class of the new bucket. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE."
   default     = "REGIONAL"

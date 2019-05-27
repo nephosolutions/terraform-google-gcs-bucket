@@ -30,7 +30,7 @@ locals {
 resource "google_storage_bucket_acl" "default_bucket" {
   bucket = "${google_storage_bucket.default.name}"
   role_entity = ["${concat(local.default_role_entities, var.role_entities)}"]
-
+  default_acl = "${var.default_acl}"
 }
 resource "google_storage_bucket_acl" "logging_bucket" {
   bucket = "${google_storage_bucket.logging.name}"

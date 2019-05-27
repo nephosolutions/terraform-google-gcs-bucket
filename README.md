@@ -23,6 +23,7 @@ module "gcs_bucket" {
 | project\_id | The ID of the google project to which the resource belongs. If it is not provided, the provider project is used. | string | `` | no |
 | region | The GCS region. If it is not provided, the provider region is used. | string | `` | no |
 | role\_entities | - | list | `<list>` | no |
+| default\_acl | Set the established ACL as default for all objects in the bucket. | string | false | no |
 | storage\_class | The Storage Class of the new bucket. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE. | string | `REGIONAL` | no |
 | versioning | Version bucket objects? | string | `false` | no |
 | website\_config | - | list | `<list>` | no |
