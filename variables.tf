@@ -19,7 +19,7 @@ variable "force_destroy" {
 
 variable "lifecycle_rules" {
   default = []
-  type    = "list"
+  type    = list(string)
 }
 
 variable "name" {
@@ -38,7 +38,7 @@ variable "region" {
 
 variable "role_entities" {
   default = []
-  type    = "list"
+  type    = list(string)
 }
 
 variable "storage_class" {
@@ -48,10 +48,11 @@ variable "storage_class" {
 
 variable "versioning" {
   description = "Version bucket objects?"
-  default = false
+  default     = false
 }
 
 variable "website_config" {
   default = []
-  type    = "list"
+  type    = list(string)
 }
+
